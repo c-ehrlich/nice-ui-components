@@ -1,38 +1,63 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
+}
+.pagePicker {
+  position: relative;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 8px;
+  width: 100vw;
+  box-shadow: 0 1px 5px 0px;
 }
 
-.App-link {
-  color: #61dafb;
+.pagePickerInner {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pagePickerInner button {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.content {
+  background-color: #f5f7f9;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+.navButton {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s
+}
+.navButton:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.navText {
+  font-weight: 600;
+}
+.navTextLight {
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
 }

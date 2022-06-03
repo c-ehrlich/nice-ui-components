@@ -1,0 +1,133 @@
+.addCommentContainer {
+  width: 600px;
+  max-width: 100%;
+  padding: 8px;
+}
+.addCommentBody {
+  padding: 32px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 48px auto auto;
+  grid-template-areas:
+    ' title title title'
+    'avatar input input'
+    '. note button';
+  row-gap: 16px;
+  column-gap: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.3);
+}
+.addCommentTitle {
+  grid-area: title;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+.addCommentAvatar {
+  grid-area: avatar;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+}
+.addCommentInput {
+  grid-area: input;
+  /* width: 400px; */
+  font-family: sans-serif;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.03);
+  font-size: 15px;
+  border-radius: 8px;
+  padding: 8px;
+  resize: none;
+  box-shadow: 1px 2px 5px -4px inset rgba(0, 0, 0, 0.3);
+}
+.addCommentInput:focus {
+  outline: 2px solid rgba(50, 100, 200, 0.5);
+}
+.addCommentNote {
+  grid-area: note;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+}
+.addCommentTooltip {
+  position: relative;
+  display: inline-block;
+}
+.addCommentTooltip .addCommentTooltipText {
+  padding: 8px 16px;
+  visibility: hidden;
+  width: 240px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  /* bottom: 150%;
+  left: 50%;
+  margin-left: -60px; */
+  top: -10px;
+  left: 135%;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.addCommentTooltip .addCommentTooltipText:after {
+  content: ' ';
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+.addCommentTooltip:hover .addCommentTooltipText {
+  visibility: visible;
+  opacity: 0.9;
+}
+.addCommentButton {
+  justify-self: end;
+  grid-area: button;
+  flex-grow: 0;
+  padding: 8px 16px;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2px ease-in-out;
+}
+.addCommentButton:hover {
+  background-color: #f5f7f9;
+}
+.addCommentButton:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 500px) {
+  .addCommentBody {
+    padding: 16px;
+    grid-template-columns: 32px auto auto;
+    grid-template-areas:
+      'avatar title title'
+      'input input input'
+      'note note button';
+  }
+  .addCommentAvatar {
+    width: 32px;
+    height: 32px;
+  }
+  .addCommentTitle {
+    margin-top: 4px;
+  }
+}
