@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ArrowBigLeft, ArrowBigRight } from 'tabler-icons-react';
 import './App.css';
 import AddComment from './components/AddComment';
+import ChitChat from './components/ChitChat';
 
 type Page = {
   component: React.ReactNode;
@@ -10,6 +11,7 @@ type Page = {
 };
 
 const pages: Page[] = [
+  { component: <ChitChat />, url: 'chitchat', name: 'ChitChat' },
   { component: <AddComment />, url: 'addcomment', name: 'Add Comment' },
 ];
 
@@ -25,7 +27,7 @@ function App() {
     <div className='App'>
       <div className='pagePicker'>
         <div className='pagePickerInner'>
-          <div className='navButton'>
+          <div tabIndex={0} className='navButton'>
             <ArrowBigLeft size={24} className='navArrow' onClick={prevPage} />
           </div>
           <div className='navText'>
@@ -35,7 +37,7 @@ function App() {
               ({page + 1}/{pages.length})
             </span>
           </div>
-          <div className='navButton'>
+          <div tabIndex={0} className='navButton'>
             <ArrowBigRight size={24} className='navArrow' onClick={nextPage} />
           </div>
         </div>
