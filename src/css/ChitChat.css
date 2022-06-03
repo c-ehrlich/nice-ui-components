@@ -1,0 +1,165 @@
+* {
+  --chitchat-color-light: #45b4dd;
+  --chitchat-color-dark: #349feb;
+}
+
+.chitChatContainer {
+  width: 400px;
+  max-width: 100%;
+  margin: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.chitChatBody {
+  width: 100%;
+  border: none;
+  box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 0.5);
+  background-color: white;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.chitChatBody > div {
+  padding: 12px;
+}
+
+.chitChatTop {
+  background: linear-gradient(
+    90deg,
+    var(--chitchat-color-light),
+    var(--chitchat-color-dark)
+  );
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+}
+
+.chitChatAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 2px solid white;
+}
+
+.chitChatPartner {
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.chitChatMessages {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.chitChatToday {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.chitChatMessageGroup {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.chitChatMyMessage,
+.chitChatPartnerMessage {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+}
+.chitChatMyMessage {
+  flex-direction: row;
+}
+.chitChatPartnerMessage {
+  flex-direction: row-reverse;
+}
+
+.chitChatTimestamp {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.chitChatMyMessageText,
+.chitChatPartnerMessageText {
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+.chitChatMyMessageText {
+  background-color: var(--chitchat-color-dark);
+  color: white;
+}
+.chitChatPartnerMessageText {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.chitChatPartnerMessage:first-child:not(:only-child)
+  > .chitChatPartnerMessageText {
+  border-bottom-left-radius: 0px;
+}
+.chitChatPartnerMessage:last-child:not(:only-child)
+  > .chitChatPartnerMessageText {
+  border-top-left-radius: 0px;
+}
+
+.chitChatMyMessage:first-child:not(:only-child) > .chitChatMyMessageText {
+  border-bottom-right-radius: 0px;
+}
+.chitChatMyMessage:last-child:not(:only-child) > .chitChatMyMessageText {
+  border-top-right-radius: 0px;
+}
+
+.chitChatInput {
+  background-color: #ebf6fd;
+  position: relative;
+}
+
+.chitChatInputBox {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 12px;
+  font-size: 14px;
+}
+.chitChatInputBox:focus {
+  outline: 2px solid var(--chitchat-color-light);
+}
+
+.chitChatInputIcons {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  right: 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 9px;
+}
+
+.chitChatInputIcon {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in;
+}
+.chitChatInputIcon:hover {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.chitChatFloatingIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--chitchat-color-dark);
+}
