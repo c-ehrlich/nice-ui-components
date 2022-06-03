@@ -1,9 +1,9 @@
-.addCommentContainer {
+.container {
   width: 600px;
   max-width: 100%;
   padding: 8px;
 }
-.addCommentBody {
+.body {
   padding: 32px;
   background-color: white;
   display: grid;
@@ -18,20 +18,20 @@
   border: 1px solid rgba(0, 0, 0, 0.05);
   box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.3);
 }
-.addCommentTitle {
+.title {
   grid-area: title;
   font-size: 18px;
   font-weight: 600;
   margin-top: 0;
   margin-bottom: 4px;
 }
-.addCommentAvatar {
+.avatar {
   grid-area: avatar;
   width: 48px;
   height: 48px;
   border-radius: 8px;
 }
-.addCommentInput {
+.input {
   grid-area: input;
   /* width: 400px; */
   font-family: sans-serif;
@@ -43,10 +43,10 @@
   resize: none;
   box-shadow: 1px 2px 5px -4px inset rgba(0, 0, 0, 0.3);
 }
-.addCommentInput:focus {
+.input:focus {
   outline: 2px solid rgba(50, 100, 200, 0.5);
 }
-.addCommentNote {
+.note {
   grid-area: note;
   display: flex;
   flex-direction: row;
@@ -56,11 +56,11 @@
   color: rgba(0, 0, 0, 0.6);
   font-size: 14px;
 }
-.addCommentTooltip {
+.tooltip {
   position: relative;
   display: inline-block;
 }
-.addCommentTooltip .addCommentTooltipText {
+.tooltip .tooltipText {
   padding: 8px 16px;
   visibility: hidden;
   width: 240px;
@@ -79,7 +79,7 @@
   opacity: 0;
   transition: opacity 1s;
 }
-.addCommentTooltip .addCommentTooltipText:after {
+.tooltip .TooltipText:after {
   content: ' ';
   position: absolute;
   top: 50%;
@@ -89,11 +89,11 @@
   border-style: solid;
   border-color: transparent black transparent transparent;
 }
-.addCommentTooltip:hover .addCommentTooltipText {
+.tooltip:hover .tooltipText {
   visibility: visible;
   opacity: 0.9;
 }
-.addCommentButton {
+.button {
   justify-self: end;
   grid-area: button;
   flex-grow: 0;
@@ -107,15 +107,15 @@
   cursor: pointer;
   transition: all 0.2px ease-in-out;
 }
-.addCommentButton:hover {
+.button:hover {
   background-color: #f5f7f9;
 }
-.addCommentButton:active {
+.button:active {
   transform: translateY(1px);
 }
 
 @media (max-width: 500px) {
-  .addCommentBody {
+  .body {
     padding: 16px;
     grid-template-columns: 32px auto auto;
     grid-template-areas:
@@ -123,11 +123,11 @@
       'input input input'
       'note note button';
   }
-  .addCommentAvatar {
+  .avatar {
     width: 32px;
     height: 32px;
   }
-  .addCommentTitle {
+  .title {
     margin-top: 4px;
   }
 }

@@ -1,9 +1,9 @@
 * {
-  --chitchat-color-light: #45b4dd;
-  --chitchat-color-dark: #349feb;
+  --color-light: #45b4dd;
+  --color-dark: #349feb;
 }
 
-.chitChatContainer {
+.container {
   width: 400px;
   max-width: 100%;
   margin: 8px;
@@ -13,7 +13,7 @@
   gap: 16px;
 }
 
-.chitChatBody {
+.body {
   width: 100%;
   border: none;
   box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 0.5);
@@ -22,120 +22,114 @@
   overflow: hidden;
 }
 
-.chitChatBody > div {
+.body > div {
   padding: 12px;
 }
 
-.chitChatTop {
-  background: linear-gradient(
-    90deg,
-    var(--chitchat-color-light),
-    var(--chitchat-color-dark)
-  );
+.top {
+  background: linear-gradient(90deg, var(--color-light), var(--color-dark));
   display: flex;
   flex-direction: row;
   gap: 12px;
   align-items: center;
 }
 
-.chitChatAvatar {
+.avatar {
   width: 40px;
   height: 40px;
   border-radius: 999px;
   border: 2px solid white;
 }
 
-.chitChatPartner {
+.partner {
   color: white;
   font-weight: 600;
   font-size: 14px;
 }
 
-.chitChatMessages {
+.messages {
   display: flex;
   flex-direction: column;
   gap: 16px;
   align-items: center;
 }
 
-.chitChatToday {
+.today {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.5);
 }
 
-.chitChatMessageGroup {
+.messageGroup {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
-.chitChatMyMessage,
-.chitChatPartnerMessage {
+.myMessage,
+.partnerMessage {
   display: flex;
   gap: 12px;
   align-items: center;
   width: 100%;
   justify-content: flex-end;
 }
-.chitChatMyMessage {
+.myMessage {
   flex-direction: row;
 }
-.chitChatPartnerMessage {
+.partnerMessage {
   flex-direction: row-reverse;
 }
 
-.chitChatTimestamp {
+.timestamp {
   font-size: 12px;
   color: rgba(0, 0, 0, 0.6);
 }
-.chitChatMyMessageText,
-.chitChatPartnerMessageText {
+.myMessageText,
+.partnerMessageText {
   padding: 8px 12px;
   border-radius: 8px;
   font-size: 14px;
 }
-.chitChatMyMessageText {
-  background-color: var(--chitchat-color-dark);
+.myMessageText {
+  background-color: var(--color-dark);
   color: white;
 }
-.chitChatPartnerMessageText {
+.partnerMessageText {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.chitChatPartnerMessage:first-child:not(:only-child)
-  > .chitChatPartnerMessageText {
+.partnerMessage:first-child:not(:only-child) > .partnerMessageText {
   border-bottom-left-radius: 0px;
 }
-.chitChatPartnerMessage:last-child:not(:only-child)
-  > .chitChatPartnerMessageText {
+.partnerMessage:last-child:not(:only-child) > .partnerMessageText {
   border-top-left-radius: 0px;
 }
 
-.chitChatMyMessage:first-child:not(:only-child) > .chitChatMyMessageText {
+.myMessage:first-child:not(:only-child) > .myMessageText {
   border-bottom-right-radius: 0px;
 }
-.chitChatMyMessage:last-child:not(:only-child) > .chitChatMyMessageText {
+.myMessage:last-child:not(:only-child) > .myMessageText {
   border-top-right-radius: 0px;
 }
 
-.chitChatInput {
+.input {
   background-color: #ebf6fd;
   position: relative;
 }
 
-.chitChatInputBox {
+.inputBox {
   width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 12px;
   font-size: 14px;
 }
-.chitChatInputBox:focus {
-  outline: 2px solid var(--chitchat-color-light);
+.inputBox:focus {
+  outline: 2px solid var(--color-light);
 }
 
-.chitChatInputIcons {
+.inputIcons {
   position: absolute;
   right: 0;
   top: 20px;
@@ -145,21 +139,21 @@
   gap: 9px;
 }
 
-.chitChatInputIcon {
+.inputIcon {
   cursor: pointer;
   color: rgba(0, 0, 0, 0.2);
   transition: all 0.2s ease-in;
 }
-.chitChatInputIcon:hover {
+.inputIcon:hover {
   color: rgba(0, 0, 0, 0.4);
 }
 
-.chitChatFloatingIcon {
+.floatingIcon {
   width: 48px;
   height: 48px;
   border-radius: 999px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--chitchat-color-dark);
+  background-color: var(--color-dark);
 }
