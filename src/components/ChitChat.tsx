@@ -1,8 +1,10 @@
+import { useState } from 'react';
 import { Messages, MoodSmile, Paperclip } from 'tabler-icons-react';
 import '../css/ChitChat.css';
 import Avatar from '../static/Avatar1.jpg';
 
 function ChitChat() {
+  const [text, setText] = useState<string>('');
   return (
     <div className='chitChatContainer'>
       <div className='chitChatBody'>
@@ -46,6 +48,11 @@ function ChitChat() {
           <input
             className='chitChatInputBox'
             placeholder='Write a response...'
+            value={text}
+            onChange={(e) => setText(e.currentTarget.value)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') setText('');
+            }}
           />
           <div className='chitChatInputIcons'>
             <MoodSmile className='chitChatInputIcon' />
