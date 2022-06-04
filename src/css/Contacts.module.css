@@ -1,0 +1,131 @@
+* {
+  --color-text-dark: hsl(202, 57%, 15%);
+  --color-text-mid: hsl(201, 23%, 34%);
+  --color-text-light: hsl(203, 15%, 47%);
+}
+.container {
+  width: 100vw;
+  max-width: 420px;
+  margin: 16px 8px;
+}
+.modal {
+  box-shadow: 0 15px 35px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 16px 0 16px;
+}
+.headerText {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.search {
+  position: relative;
+}
+.searchInput {
+  width: 100%;
+  border: none;
+  background-color: #f2f5f9;
+  padding: 12px 12px 12px 40px;
+  font-size: 16px;
+  border-radius: 8px;
+  color: hsl(203, 15%, 65%);
+}
+.searchInput:focus {
+  color: var(--color-text-mid);
+}
+.searchIcon {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  color: var(--color-text-light);
+}
+
+.contactList {
+  height: 300px;
+  margin-top: 8px;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.contact {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border-radius: 8px;
+}
+.contact:hover {
+  background-color: #f2f5f9;
+  cursor: pointer;
+}
+.onlineBullet,
+.offlineBullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  margin-right: 16px;
+}
+.onlineBullet {
+  background-color: #10b980;
+}
+.offlineBullet {
+  background-color: red;
+}
+.contactData {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contactName {
+  color: var(--color-text-dark);
+}
+.contactRole {
+  color: var(--color-text-light);
+  font-size: 12px;
+  margin-left: 12px;
+}
+
+.bottom {
+  background-color: hsl(204, 2%, 97%);
+  padding: 16px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+.cancel,
+.invite {
+  font-size: 15px;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.cancel {
+  background-color: transparent;
+  color: var(--color-text-mid);
+}
+.cancel:hover {
+  text-decoration: underline;
+}
+.invite {
+  background-color: #0da5e8;
+  color: white;
+  box-shadow: 0 1px 15px -5px rgba(0, 0, 0, 0.2);
+}
+.invite:hover {
+  background-color: hsl(198, 89%, 58%);
+}
+.invite:active,
+.cancel:active {
+  transform: translateY(1px);
+}

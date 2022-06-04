@@ -4,6 +4,7 @@ import './App.css';
 import AddComment from './components/AddComment';
 import BookEvent from './components/BookEvent';
 import ChitChat from './components/ChitChat';
+import Contacts from './components/Contacts';
 
 type Page = {
   component: React.ReactNode;
@@ -12,6 +13,7 @@ type Page = {
 };
 
 const pages: Page[] = [
+  { component: <Contacts />, url: 'contacts', name: 'Contacts' },
   { component: <BookEvent />, url: 'bookevent', name: 'Book Event' },
   { component: <ChitChat />, url: 'chitchat', name: 'Chat' },
   { component: <AddComment />, url: 'addcomment', name: 'Add Comment' },
