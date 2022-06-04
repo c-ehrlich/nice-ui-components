@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ArrowBigLeft, ArrowBigRight } from 'tabler-icons-react';
 import './App.css';
 import AddComment from './components/AddComment';
+import BookEvent from './components/BookEvent';
 import ChitChat from './components/ChitChat';
 
 type Page = {
@@ -11,7 +12,8 @@ type Page = {
 };
 
 const pages: Page[] = [
-  { component: <ChitChat />, url: 'chitchat', name: 'ChitChat' },
+  { component: <BookEvent />, url: 'bookevent', name: 'Book Event' },
+  { component: <ChitChat />, url: 'chitchat', name: 'Chat' },
   { component: <AddComment />, url: 'addcomment', name: 'Add Comment' },
 ];
 

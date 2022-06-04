@@ -1,0 +1,156 @@
+.container {
+  width: 100%;
+  max-width: 700px;
+  margin: 8px;
+}
+
+.bookEvent {
+  display: grid;
+  background-color: white;
+  border-radius: 16px;
+  grid-template-areas:
+    'image header'
+    'image details';
+  grid-template-columns: 200px auto;
+  grid-template-rows: 140px 140px;
+  overflow: hidden;
+  /* box-shadow: 0 15px 35px hsla(0, 0, 0, .2); */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 620px) {
+  .bookEvent {
+    grid-template-areas:
+      'image'
+      'header'
+      'details';
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+  }
+}
+/* TODO: mobile layout */
+
+.imageContainer {
+  grid-area: image;
+  object-fit: cover;
+  overflow: hidden;
+}
+.image {
+  height: 100%;
+}
+
+@media (max-width: 620px) {
+  .image {
+    height: auto;
+    width: 100%;
+  }
+}
+
+.header {
+  grid-area: header;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  margin: 0;
+  font-weight: 800;
+  color: hsl(202, 57%, 15%);
+  font-stretch: extra-expanded;
+}
+
+.subTitle {
+  margin: 0;
+  color: hsl(201, 23%, 34%);
+  font-size: 19px;
+}
+
+.details {
+  grid-area: details;
+  background-color: hsl(204, 2%, 97%);
+  padding: 24px;
+  display: grid;
+  grid-template-areas:
+    'price button'
+    'reviews button'
+    'note note';
+  gap: 8px;
+}
+
+@media (max-width: 420px) {
+  .details {
+    grid-template-areas:
+      'price'
+      'reviews'
+      'note'
+      'button';
+  }
+}
+
+.price {
+  grid-area: price;
+  color: hsl(201, 23%, 34%);
+  font-size: 18px;
+}
+
+.priceCost {
+  color: hsl(202, 57%, 15%);
+  font-weight: 800;
+}
+
+.reviews {
+  grid-area: reviews;
+  display: flex;
+  gap: 8px;
+  color: hsl(203, 15%, 47%);
+}
+
+.reviewStars {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  background-image: linear-gradient(to bottom, #42b696, #197e77);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bookButton {
+  grid-area: button;
+  font-size: 18px;
+  border: none;
+  padding: 16px 40px;
+  align-self: start;
+  justify-self: end;
+  background-color: hsl(228, 57%, 54%);
+  color: white;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.15s ease-in;
+}
+.bookButton:hover {
+  background-color: hsl(228, 75%, 63%);
+}
+@media (max-width: 420px) {
+  .bookButton {
+    width: 100%;
+    margin-top: 8px;
+  }
+}
+
+.note {
+  grid-area: note;
+  align-self: end;
+  color: hsl(203, 15%, 47%);
+}
+
+@media (max-width: 620px) {
+  .note {
+    margin-top: 16px;
+  }
+}
