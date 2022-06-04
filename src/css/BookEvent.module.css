@@ -123,6 +123,7 @@
 }
 
 .bookButton {
+  user-select: none;
   grid-area: button;
   font-size: 18px;
   border: none;

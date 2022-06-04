@@ -138,6 +138,7 @@
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
+  user-select: none; 
 }
 .cancel {
   background-color: transparent;

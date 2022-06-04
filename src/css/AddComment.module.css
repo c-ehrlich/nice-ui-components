@@ -94,6 +94,7 @@
   opacity: 0.9;
 }
 .button {
+  user-select: none;
   justify-self: end;
   grid-area: button;
   flex-grow: 0;
