@@ -20,10 +20,38 @@
   gap: 16px;
   padding: 16px 16px 0 16px;
 }
+.headerFlex {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 .headerText {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 4px;
+}
+.closeButtonContainer {
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease-in;
+}
+.closeButtonContainer:hover {
+  background-color: hsl(204, 2%, 95%)
+}
+.closeButtonContainer:active {
+  transform: translateY(1px);
+}
+.closeButton {
+  color: var(--color-text-light);
+}
+.closeButton:hover {
+  color: grey;
 }
 
 .search {
@@ -55,6 +83,7 @@
   display: flex;
   flex-direction: column;
   gap: 0;
+  padding-bottom: 12px;
 }
 .contact {
   display: flex;

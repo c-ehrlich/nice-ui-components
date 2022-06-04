@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { Search } from 'tabler-icons-react';
+import { Search, X } from 'tabler-icons-react';
 import styles from '../css/Contacts.module.css';
 
 type Contact = {
@@ -42,7 +42,12 @@ function Contacts() {
     <div className={styles.container}>
       <div className={styles.modal}>
         <div className={styles.top}>
-          <div className={styles.headerText}>Contacts</div>
+          <div className={styles.headerFlex}>
+            <div className={styles.headerText}>Contacts</div>
+            <div className={styles.closeButtonContainer} >
+              <X className={styles.closeButton} size={20} />
+            </div>
+          </div>
           <div className={styles.search}>
             <input
               className={styles.searchInput}
