@@ -56,10 +56,7 @@ function ChitChat() {
           />
           <div className={styles.inputIcons}>
             <MoodSmile className={styles.inputIcon} />
-            <Paperclip
-              className={styles.inputIcon}
-              color='rgba(0, 0, 0, 0.2)'
-            />
+            <Paperclip className={styles.inputIcon} />
           </div>
         </div>
       </div>
