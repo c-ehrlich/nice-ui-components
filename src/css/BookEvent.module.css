@@ -1,7 +1,12 @@
 .container {
-  width: 100%;
+  width: 100;
   max-width: 700px;
   margin: 8px;
+}
+@media (max-width: 700px) {
+  .container {
+    width: 500px;
+  }
 }
 
 .bookEvent {
@@ -18,7 +23,7 @@
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 620px) {
+@media (max-width: 700px) {
   .bookEvent {
     grid-template-areas:
       'image'
@@ -39,7 +44,7 @@
   height: 100%;
 }
 
-@media (max-width: 620px) {
+@media (max-width: 700px) {
   .image {
     height: auto;
     width: 100%;
@@ -58,7 +63,6 @@
   margin: 0;
   font-weight: 800;
   color: hsl(202, 57%, 15%);
-  font-stretch: extra-expanded;
 }
 
 .subTitle {
@@ -152,7 +156,7 @@
   color: hsl(203, 15%, 47%);
 }
 
-@media (max-width: 620px) {
+@media (max-width: 700px) {
   .note {
     margin-top: 16px;
   }
