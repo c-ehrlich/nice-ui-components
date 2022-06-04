@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/nice-ui-components/static/css/main.201ae4aa.css",
-    "main.js": "/nice-ui-components/static/js/main.23719a00.js",
+    "main.css": "/nice-ui-components/static/css/main.7f288377.css",
+    "main.js": "/nice-ui-components/static/js/main.76a4a7c7.js",
     "static/js/787.dad39932.chunk.js": "/nice-ui-components/static/js/787.dad39932.chunk.js",
     "static/media/Amsterdam.jpg": "/nice-ui-components/static/media/Amsterdam.555b67cd95d433af6c28.jpg",
     "index.html": "/nice-ui-components/index.html",
-    "main.201ae4aa.css.map": "/nice-ui-components/static/css/main.201ae4aa.css.map",
-    "main.23719a00.js.map": "/nice-ui-components/static/js/main.23719a00.js.map",
+    "main.7f288377.css.map": "/nice-ui-components/static/css/main.7f288377.css.map",
+    "main.76a4a7c7.js.map": "/nice-ui-components/static/js/main.76a4a7c7.js.map",
     "787.dad39932.chunk.js.map": "/nice-ui-components/static/js/787.dad39932.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.201ae4aa.css",
-    "static/js/main.23719a00.js"
+    "static/css/main.7f288377.css",
+    "static/js/main.76a4a7c7.js"
   ]
 }
