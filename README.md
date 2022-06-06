@@ -26,6 +26,7 @@ View the site (by default it will be at http://localhost:3000)
 
 ## Credits
 
-[Amsterdam photo](https://unsplash.com/photos/3Ze88tZX-p0?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink) by Nastya Dulhiier on Unsplash
+[Amsterdam photo](https://unsplash.com/photos/3Ze88tZX-p0) by Nastya Dulhiier on Unsplash
+[Apartment photo](https://unsplash.com/photos/4pYg5OUJUrk) by Augusto Lopes on Unsplash
 
 Avatars used: [@awesomekling](https://github.com/awesomekling)
