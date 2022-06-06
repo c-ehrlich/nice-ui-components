@@ -1,0 +1,145 @@
+* {
+  --color-text-dark: hsl(202, 57%, 15%);
+  --color-text-mid: hsl(201, 23%, 34%);
+  --color-text-light: hsl(203, 15%, 47%);
+}
+
+.container {
+  width: 100%;
+  max-width: 330px;
+  margin: 8px;
+}
+
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 15px 0 rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  background-color: #f1f4f7;
+}
+
+.photoContainer {
+  object-fit: contain;
+  position: relative;
+}
+
+.photo {
+  width: 100%;
+  height: autol
+}
+
+.heartIcon {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  color: white;
+  filter: drop-shadow 0 0 15px 0 red;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+.heartIcon:hover {
+  color: red;
+  transform: scale(1.1);
+}
+
+.heartIconLiked {
+  color: red;
+  fill: red;
+}
+
+.mainInfo {
+  background-color: white;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.houseType {
+  color: var(--color-text-mid);
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.price {
+  color: var(--color-text-dark);
+  font-weight: 400;
+  font-size: 28px;
+  margin: 0;
+}
+.address {
+  color: var(--color-text-light);
+  font-size: 14px;
+}
+
+.rooms {
+  margin-top: 2px;
+  background-color: white;
+  padding: 16px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.roomsCategory {
+  display: flex;
+  gap: 8px;
+}
+.roomsIcon {
+  color: hsl(203, 15%, 70%);
+  padding-bottom: 2px;
+}
+.roomsDescription {
+  color: var(--color-text-light);
+}
+.roomsCount {
+  color: var(--color-text-dark);
+  font-weight: 700;
+}
+
+ 
+.contact {
+  padding: 16px;
+  display: grid;
+  grid-template-areas:
+    'photo name'
+    'photo phone';
+  grid-template-rows: auto auto;
+  grid-template-columns: 40px auto;
+  gap: 0px 8px;
+}
+
+.contactImage {
+  grid-area: photo;
+  width: 100%;
+  border-radius: 999px;
+}
+
+.contactName {
+  grid-area: name;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--color-text-dark);
+}
+
+.contactPhone {
+  grid-area: phone;
+  font-size: 12px;
+  color: var(--color-text-mid);
+}
+
+.scheduleButton {
+  border: none;
+  background-color: #4252ae;
+  color: white;
+  font-size: 12px;
+  padding: 16px;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+}
+.scheduleButton:hover {
+  background-color: #303c80;
+}
