@@ -6,6 +6,7 @@ import Apartment from './components/Apartment';
 import BookEvent from './components/BookEvent';
 import ChitChat from './components/ChitChat';
 import Contacts from './components/Contacts';
+import Podcast from './components/Podcast';
 
 type Page = {
   component: React.ReactNode;
@@ -14,6 +15,7 @@ type Page = {
 };
 
 const pages: Page[] = [
+  { component: <Podcast />, url: 'podcast', name: 'Podcast' },
   { component: <Apartment />, url: 'apartment', name: 'Apartment' },
   { component: <Contacts />, url: 'contacts', name: 'Contacts' },
   { component: <BookEvent />, url: 'bookevent', name: 'Book Event' },
