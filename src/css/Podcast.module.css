@@ -26,6 +26,13 @@
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 532px) {
+  .menuBarInner {
+    max-width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
 .menuBarTextRow {
   display: flex;
   gap: 32px;
@@ -49,7 +56,9 @@
 .searchIcon {
   color: var(--color-text-light);
 }
-.hamburgerButton {
+.backButton {
+  /* hack to deal with the weird bounding box of this icon */
+  margin-left: -8px;
   color: var(--color-text-light);
 }
 
@@ -67,8 +76,9 @@
   row-gap: 8px;
   column-gap: 24px;
 }
-@media (max-width: 500px) {
+@media (max-width: 532px) {
   .titleGrid {
+    max-width: 100%;
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -143,7 +153,7 @@
   grid-row-gap: 4px;
   align-items: center;
 }
-@media (max-width: 500px) {
+@media (max-width: 532px) {
   .newestEpisode {
     left: 16px;
     right: 16px;
@@ -260,7 +270,7 @@
 
 .appLogo,
 .searchIcon,
-.hamburgerButton,
+.backButton,
 .menuBarTextItem,
 .playButtonOuter,
 .dots {

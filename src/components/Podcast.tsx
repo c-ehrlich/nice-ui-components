@@ -5,7 +5,6 @@ import {
   Check,
   ChevronLeft,
   Dots,
-  Menu2,
   PlayerPlay,
   Search,
 } from 'tabler-icons-react';
@@ -93,11 +92,11 @@ function MenuBar() {
 
   return (
     <div className={s.menuBarInner}>
-      {width <= 500 ? (
+      {width <= 532 ? (
         <>
-          <ChevronLeft size={30} className={s.hamburgerButton} />
+          <ChevronLeft size={32} className={s.backButton} />
           <BrandSoundcloud size={40} className={s.appLogo} />
-          <Search size={24} className={s.searchIcon} />
+          <Search size={28} className={s.searchIcon} />
         </>
       ) : (
         <>
