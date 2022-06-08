@@ -29,4 +29,5 @@ View the site (by default it will be at http://localhost:3000)
 [Amsterdam photo](https://unsplash.com/photos/3Ze88tZX-p0) by Nastya Dulhiier on Unsplash
 [Apartment photo](https://unsplash.com/photos/4pYg5OUJUrk) by Augusto Lopes on Unsplash
 
-Avatars used: [@awesomekling](https://github.com/awesomekling)
+Avatars:
+[[1]](https://unsplash.com/photos/IF9TK5Uy-KI) [[2]](https://unsplash.com/photos/iEEBWgY_6lA) [[3]](https://unsplash.com/photos/K84vnnzxmTQ) [[4]](https://unsplash.com/photos/MTZTGvDsHFY) [[5]](https://unsplash.com/photos/kVg2DQTAK7c) [[6]](https://unsplash.com/photos/ExVlW9b648Q) [[7]](https://unsplash.com/photos/jKuch64WZ_o) [[8]](https://unsplash.com/photos/ocOW8-uiAjk)

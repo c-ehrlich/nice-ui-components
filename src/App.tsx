@@ -6,6 +6,7 @@ import Apartment from './components/Apartment';
 import BookEvent from './components/BookEvent';
 import ChitChat from './components/ChitChat';
 import Contacts from './components/Contacts';
+import NotSlack from './components/NotSlack';
 import Podcast from './components/Podcast';
 
 type Page = {
@@ -15,6 +16,7 @@ type Page = {
 };
 
 const pages: Page[] = [
+  { component: <NotSlack />, url: 'notslack', name: 'Messaging' },
   { component: <Podcast />, url: 'podcast', name: 'Podcast' },
   { component: <Apartment />, url: 'apartment', name: 'Apartment' },
   { component: <Contacts />, url: 'contacts', name: 'Contacts' },

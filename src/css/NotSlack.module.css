@@ -1,0 +1,411 @@
+* {
+  --color-online-indicator: hsl(145, 57%, 65%);
+  --color-blue-dark: hsl(208, 63%, 27%);
+  --color-blue-med: hsl(207, 65%, 38%);
+  --color-blue-lmed: hsl(206, 72%, 60%);
+  --color-blue-light: hsl(206, 79%, 81%);
+  --color-teal-dark: hsl(175, 57%, 25%);
+  --color-teal-light: hsl(177, 58%, 64%);
+  --color-red-alert: hsl(0, 70%, 52%);
+  --color-grey-5: hsl(213, 12%, 15%);
+  --color-grey-4: hsl(210, 9%, 31%);
+  --color-grey-3: hsl(208, 7%, 55%);
+  --color-grey-2: hsl(208, 11%, 71%);
+  --color-grey-1: hsl(210, 17%, 95%);
+  --color-yellow-5: hsl(44, 66%, 22%);
+  --color-yellow-4: hsl(43, 63%, 34%);
+  --color-yellow-3: hsl(42, 87%, 67%);
+  --color-yellow-2: hsl(44, 90%, 80%);
+  --color-yellow-1: hsl(44, 100%, 98%);
+}
+
+.container {
+  position: relative;
+  /* width: 100%; */
+  max-width: 1000px;
+  max-height: 700px;
+  margin-left: 16px;
+  margin-right: 16px;
+  border-radius: 12px;
+  background-color: white;
+  overflow: hidden;
+  display: grid;
+  grid-template-areas:
+    'navbar navbar'
+    'sidebar chat'
+    'sidebar compose';
+  grid-template-rows: min-content 1fr auto;
+  box-shadow: 0 1px 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+
+.sidebar {
+  grid-area: sidebar;
+  overflow-x: hidden;
+  transition: width 0.5s;
+}
+.sidebarInner {
+  width: 260px;
+  height: 100%;
+  background-color: var(--color-blue-med);
+  padding: 12px 16px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: white;
+}
+.sidebarHeader {
+  display: grid;
+  grid-template-areas:
+    'group alert'
+    'people alert';
+  grid-row-gap: 8px;
+  grid-column-gap: 16px;
+}
+.sidebarHeaderGroup {
+  grid-area: group;
+  display: flex;
+  font-weight: 700;
+  align-items: center;
+  gap: 4px;
+}
+.sidebarHeaderGroupCaret {
+  color: var(--color-blue-lmed);
+}
+.sidebarHeaderPeople {
+  grid-area: people;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 4px;
+}
+.sidebarHeaderOnline {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background-color: var(--color-online-indicator);
+}
+.sidebarHeaderPersonName {
+  color: var(--color-blue-light);
+  font-size: 14px;
+}
+.sidebarHeaderAlert {
+  grid-area: alert;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+.sidebarHeaderAlertIcon {
+  color: var(--color-blue-light);
+}
+.sidebarHeaderAlertCircle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background-color: var(--color-red-alert);
+  border: 2px solid white;
+}
+.sidebarInboxes {
+  display: flex;
+  flex-direction: column;
+}
+.sidebarInbox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 2px;
+  margin: 0 -12px 0 -24px;
+  padding: 8px 12px 8px 24px;
+  cursor: pointer;
+}
+.sidebarInbox:hover {
+  background-color: var(--color-blue-dark);
+}
+.sidebarInboxIcon {
+  color: var(--color-blue-light);
+}
+.sidebarChannels {
+  display: flex;
+  flex-direction: column;
+}
+.sidebarChannelsHeader {
+  color: var(--color-blue-light);
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  padding: 8px 0;
+}
+.sidebarChannel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 -12px 0 -24px;
+  padding: 8px 12px 8px 24px;
+  cursor: pointer;
+}
+.sidebarChannel:hover {
+  background-color: var(--color-blue-dark);
+}
+.sidebarChannelUnread {
+  color: var(--color-teal-dark);
+  background-color: var(--color-teal-light);
+  border-radius: 999px;
+  padding: 2px 12px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.sidebarChannelsNew {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 -12px 0 -24px;
+  padding: 8px 12px 8px 24px;
+  cursor: pointer;
+}
+.sidebarChannelsNew:hover {
+  background-color: var(--color-blue-dark);
+}
+.sidebarChannelsNewText {
+  color: var(--color-blue-light);
+}
+.sidebarArchive {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  cursor: pointer;
+}
+.sidebarArchiveIcon {
+  color: var(--color-blue-light);
+}
+.sidebarArchiveText {
+  font-weight: 500;
+  color: var(--color-blue-light);
+}
+
+
+
+
+.navbarContainer {
+  grid-area: navbar;
+  width: 100%;
+  display: grid;
+  grid-template-columns: min-content auto;
+  transition: grid-template-columns 0.5s; 
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  align-items: center;
+  border-bottom: 2px solid var(--color-grey-1);
+  transition: padding-left 0.5s;
+}
+.navbarCollapsed {
+  padding-left: 88px;
+  user-select: none;
+}
+
+.sidebarHamburger {
+  position: relative;
+  width: 260px;
+  background-color: var(--color-blue-med);
+  transition: width 0.5s;
+}
+.navbarContainerCollapsed .sidebarHamburger {
+  width: 0px;
+}
+.sidebarHamburgerButton {
+  position: absolute;
+  top: 16px;
+  left: 24px;
+  color: var(--color-blue-light);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.sidebarHamburgerButton:hover {
+  color: white;
+}
+.sidebarHamburgerButtonCollapsed {
+  color: black;
+  cursor: pointer;
+  transition: color 0.5s ease-in;
+}
+.sidebarHamburgerButtonCollapsed:hover {
+  color: var(--color-grey-5);
+}
+
+.navbarTitle {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--color-grey-5);
+}
+.navbarIcons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.greyIcon {
+  color: var(--color-grey-2);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.greyIcon:hover {
+  color: var(--color-grey-4);
+}
+
+.alert {
+  height: 72px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  grid-area: alert;
+  transition: height 0.4s;
+  z-index: 2;
+}
+.alertInner {
+  background-color: var(--color-yellow-1);
+  border-bottom: 2px solid var(--color-yellow-2);
+  display: grid;
+  grid-template-areas:
+    'logo oops close'
+    'logo text close';
+  grid-template-columns: 40px auto;
+  column-gap: 24px;
+  align-items: center;
+  padding: 16px;
+}
+.alertLogo {
+  grid-area: logo;
+  background-color: var(--color-yellow-2);
+  border: 0.5px solid var(--color-yellow-3);
+  border-radius: 999px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.alertLogoInner {
+  background-color: white;
+  width: 24px;
+  height: 24px;
+  border: 0.5px solid var(--color-yellow-3);
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--color-yellow-4);
+  font-size: 20px;
+}
+.alertOops {
+  grid-area: oops;
+  color: var(--color-yellow-5);
+  font-weight: 700;
+}
+.alertText {
+  grid-area: text;
+  color: var(--color-yellow-4);
+  font-size: 14px;
+}
+.alertClose {
+  grid-area: close;
+  align-self: start;
+  justify-self: end;
+  color: var(--color-yellow-4);
+}
+
+.chat {
+  height: 100%;
+  min-height: 0;
+  width: 100%;
+  position: relative;
+  grid-area: chat;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column-reverse;
+  overflow: auto;
+  padding: 0 24px;
+  padding-bottom: 16px;
+  gap: 24px;
+  transition: padding 0.5s;
+}
+.message {
+  display: grid;
+  grid-template-areas:
+    'avatar info'
+    'avatar text';
+  grid-template-columns: 48px auto auto;
+  grid-column-gap: 16px;
+  grid-row-gap: 4px;
+}
+.messageAvatar {
+  grid-area: avatar;
+  border-radius: 999px;
+  height: 48px;
+  width: 48px;
+}
+.messageInfo {
+  grid-area: info;
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+}
+.messageName {
+  font-weight: 700;
+  color: var(--color-grey-5);
+}
+.messageTime {
+  font-size: 12px;
+  color: var(--color-grey-3);
+}
+.messageText {
+  grid-area: text;
+  color: var(--color-grey-4);
+  line-height: 1.5em;
+}
+.chat span {
+  color: var(--color-blue-lmed);
+  cursor: pointer;
+}
+.chat span:hover {
+  color: var(--color-blue-med);
+}
+
+.compose {
+  grid-area: compose;
+  padding: 0 16px 16px 16px;
+  width: 100%;
+  position: relative;
+  background-color: transparent;
+}
+.composeInput {
+  border: none;
+  background-color: var(--color-grey-1);
+  border-radius: 8px;
+  font-size: 14px;
+  padding: 12px;
+  width: 100%;
+  color: var(--color-grey-4);
+  font-weight: 400;
+}
+.composeIcons {
+  position: absolute;
+  top: 8px;
+  right: 24px;
+  display: flex;
+  gap: 4px;
+}
+
+.height0 {
+  height: 0px;
+  overflow: hidden;
+}
