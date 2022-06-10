@@ -41,9 +41,9 @@
   width: 260px;
   grid-area: sidebar;
   overflow-x: hidden;
+  overflow-y: scroll;
   transition: width 0.5s;
   white-space: nowrap;
-  overflow: scroll;
   padding-top: 64px;
   background-color: var(--color-blue-med);
 }
