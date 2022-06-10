@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/nice-ui-components/static/css/main.65eec5bb.css",
+    "main.css": "/nice-ui-components/static/css/main.54c018ae.css",
     "main.js": "/nice-ui-components/static/js/main.55efb6c4.js",
     "static/js/787.dad39932.chunk.js": "/nice-ui-components/static/js/787.dad39932.chunk.js",
     "static/media/Apartment.jpg": "/nice-ui-components/static/media/Apartment.1a279212035f973e2ddf.jpg",
@@ -12,12 +12,12 @@
     "static/media/Avatar8.jpg": "/nice-ui-components/static/media/Avatar8.7418c00264d8faae1887.jpg",
     "static/media/Avatar9.jpg": "/nice-ui-components/static/media/Avatar9.643104f8a9d729b20878.jpg",
     "index.html": "/nice-ui-components/index.html",
-    "main.65eec5bb.css.map": "/nice-ui-components/static/css/main.65eec5bb.css.map",
+    "main.54c018ae.css.map": "/nice-ui-components/static/css/main.54c018ae.css.map",
     "main.55efb6c4.js.map": "/nice-ui-components/static/js/main.55efb6c4.js.map",
     "787.dad39932.chunk.js.map": "/nice-ui-components/static/js/787.dad39932.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.65eec5bb.css",
+    "static/css/main.54c018ae.css",
     "static/js/main.55efb6c4.js"
   ]
 }
