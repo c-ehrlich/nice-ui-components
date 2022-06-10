@@ -26,20 +26,15 @@ import Avatar8 from '../static/Avatar8.jpg';
 import Avatar9 from '../static/Avatar9.jpg';
 import { classes } from '../utils/classes';
 
-// TODO: sidebar is absolute / covers the whole thing when we're under 600px
-
 function NotSlack2() {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   function toggleSidebarCollapsed() {
     setSidebarCollapsed((c) => !c);
   }
-  function sidebarWidth() {
-    return sidebarCollapsed ? '0' : '260px';
-  }
+
   return (
     <div className={s.container}>
-      <Sidebar width={sidebarWidth()} />
-
+      <Sidebar sidebarCollapsed={sidebarCollapsed} />
       <Navbar
         sidebarCollapsed={sidebarCollapsed}
         toggleSidebarCollapsed={toggleSidebarCollapsed}
@@ -67,9 +62,13 @@ function ChatMessage({ message }: { message: Message }) {
   );
 }
 
-function Sidebar({ width }: { width: string }) {
+function Sidebar({ sidebarCollapsed }: { sidebarCollapsed: boolean }) {
   return (
-    <div className={s.sidebar} style={{ width: `${width}` }}>
+    <div
+      className={
+        sidebarCollapsed ? classes([s.sidebar, s.sidebarCollapsed]) : s.sidebar
+      }
+    >
       <div className={s.sidebarInner}>
         <div className={s.sidebarHeader}>
           <div className={s.sidebarHeaderGroup}>
@@ -232,8 +231,8 @@ export const messages: Message[] = [
     time: '12:44 PM',
     text: (
       <>
-        <span>@Samantha</span> yep! I put a few photos in the shared
-        folder. Let me know if you have any questions.
+        <span>@Samantha</span> yep! I put a few photos in the shared folder. Let
+        me know if you have any questions.
       </>
     ),
   },
@@ -287,7 +286,8 @@ export const messages: Message[] = [
     time: '11:15 AM',
     text: (
       <>
-        Thanks for yesterday's meeting. Was good to see how the product is coming along. Let's have a similar meeting next week.
+        Thanks for yesterday's meeting. Was good to see how the product is
+        coming along. Let's have a similar meeting next week.
       </>
     ),
   },
@@ -297,7 +297,8 @@ export const messages: Message[] = [
     time: '11:01 AM',
     text: (
       <>
-        Follow up on the meeting: Just got the confirmation from our client that they're happy with the project files and want to proceed as planned :)
+        Follow up on the meeting: Just got the confirmation from our client that
+        they're happy with the project files and want to proceed as planned :)
       </>
     ),
   },
