@@ -34,11 +34,20 @@ function NotSlack2() {
 
   return (
     <div className={s.container}>
-      <Sidebar sidebarCollapsed={sidebarCollapsed} />
-      <Navbar
-        sidebarCollapsed={sidebarCollapsed}
-        toggleSidebarCollapsed={toggleSidebarCollapsed}
+      <Menu2
+        onClick={toggleSidebarCollapsed}
+        size={26}
+        className={
+          sidebarCollapsed
+            ? classes([
+                s.sidebarHamburgerButton,
+                s.sidebarHamburgerButtonCollapsed,
+              ])
+            : s.sidebarHamburgerButton
+        }
       />
+      <Sidebar sidebarCollapsed={sidebarCollapsed} />
+      <Navbar sidebarCollapsed={sidebarCollapsed} />
       <Chat />
       <Compose />
     </div>
@@ -126,13 +135,7 @@ function Sidebar({ sidebarCollapsed }: { sidebarCollapsed: boolean }) {
   );
 }
 
-function Navbar({
-  sidebarCollapsed,
-  toggleSidebarCollapsed,
-}: {
-  sidebarCollapsed: boolean;
-  toggleSidebarCollapsed: () => void;
-}) {
+function Navbar({ sidebarCollapsed }: { sidebarCollapsed: boolean }) {
   return (
     <div
       className={
@@ -141,20 +144,7 @@ function Navbar({
           : s.navbarContainer
       }
     >
-      <div className={s.sidebarHamburger}>
-        <Menu2
-          onClick={toggleSidebarCollapsed}
-          size={26}
-          className={
-            sidebarCollapsed
-              ? classes([
-                  s.sidebarHamburgerButton,
-                  s.sidebarHamburgerButtonCollapsed,
-                ])
-              : s.sidebarHamburgerButton
-          }
-        />
-      </div>
+      {/*  */}
       <div
         className={
           sidebarCollapsed ? classes([s.navbar, s.navbarCollapsed]) : s.navbar
