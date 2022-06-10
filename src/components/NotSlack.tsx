@@ -1,3 +1,4 @@
+import { useViewportSize } from '@mantine/hooks';
 import { useState } from 'react';
 import {
   Archive,
@@ -27,7 +28,10 @@ import Avatar9 from '../static/Avatar9.jpg';
 import { classes } from '../utils/classes';
 
 function NotSlack2() {
-  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const { width } = useViewportSize();
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(
+    width <= 600 ? true : false
+  );
   function toggleSidebarCollapsed() {
     setSidebarCollapsed((c) => !c);
   }
