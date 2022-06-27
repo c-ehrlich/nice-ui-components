@@ -1,5 +1,9 @@
 # Nice UI Components
 
+[Live Deployment](https://c-ehrlich.github.io/nice-ui-components/)
+
+![UI Components Screenshot](https://user-images.githubusercontent.com/8353666/175956230-4b670cc3-5cd7-4b9e-ab91-9ac538257974.png)
+
 ## What is this?
 
 When I started making UIs I experienced what Ira Glass calls [The Gap](https://vimeo.com/85040589).
@@ -27,6 +31,7 @@ View the site (by default it will be at http://localhost:3000)
 ## Credits
 
 [Amsterdam photo](https://unsplash.com/photos/3Ze88tZX-p0) by Nastya Dulhiier on Unsplash
+
 [Apartment photo](https://unsplash.com/photos/4pYg5OUJUrk) by Augusto Lopes on Unsplash
 
 Avatars:
